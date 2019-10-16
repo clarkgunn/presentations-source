@@ -7,8 +7,8 @@
         <img src="./assets/vue-logo.png" alt="Vue.js logo">
       </slide>
       <slide enter="animated fadeUp">
-        <img style="border-radius: 100%" src="./assets/Clark.png" alt="a photo of me">
-        <h1>Clark Mitchell</h1>
+        <img id="profile" style="border-radius: 100%" src="./assets/Clark.png" alt="a photo of me">
+        <h2 id="name">Clark Mitchell</h2>
         <div style="display:flex; align-items: center">
           <ul style="list-style:none;">
             <li><span class="grey">https://</span>ClarkMitchell.dev</li>
@@ -93,7 +93,7 @@
       </slide>
       <slide enter="animated fadeInDown">
         <input type="text" placeholder="enter text" v-model="binding">
-        <h1>{{ binding }}</h1>
+        <h2>{{ binding }}</h2>
         <img src="./assets/new-vue.png" alt="simple vue example">
       </slide>
       <slide enter="fade in">
@@ -103,7 +103,7 @@
         <img class="fullimage" src="./assets/v-if.png" alt="conditional code example">
       </slide>
       <slide id="loops" :steps=3 enter="bounceInRight" leave="bounceOutDown">
-        <h1>Loops</h1>
+        <h2>Loops</h2>
         <eg-transition enter="bounceInLeft" leave="none">
           <img v-if="step == 2" src="./assets/v-for.png" alt="Vue.js logo">
         </eg-transition>
@@ -123,7 +123,7 @@
         <img class="fullimage"  src="./assets/v-on.png" alt="v-on code example">
       </slide>
       <slide enter="animated fadeInUp">
-        <h2>Vue Lifecycle</h2>
+        <h3>Vue Lifecycle</h3>
         <img class="fullimage" src="./assets/vue-lifecycle-hooks.png" alt="vue lifecycle flowchart">
       </slide>
       <slide enter="animated fadeInUp">
@@ -233,9 +233,9 @@ export default {
     color: grey;
   }
 
-  img.fullimage {
+  img {
     max-width: 100% !important;
-    width: 100%
+    max-height: 80vh;
   }
 
   button {
@@ -247,6 +247,16 @@ export default {
   .icon {
     width: 1em;
     height: 1em;
+  }
+
+  #profile {
+    max-height: 20vh;
+    margin-top: 10vh;
+  }
+
+  h1, h2, h3 {
+    margin-top: .15em;
+    margin-bottom: .15em;
   }
 
   #MyFirstSlideshow {
